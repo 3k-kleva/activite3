@@ -13,7 +13,7 @@ public class GrilleImpl implements Grille {
   private static final char[] POSSIBLE = new char[] {'1', '2', '3', '4', '5', '6',
    '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f'};
   /** Tableau de caracteres à deux dimension .*/
-  protected final static char[][] grille = new char[][] {
+  private static char[][] grille = new char[][] {
     {'.', '@', '@', '@', '3', '@', '@', '6', '2'},
     {'@', '@', '@', '@', '7', '2', '@', '@', '1'},
     {'2', '@', '@', '6', '@', '@', '8', '@', '@'},
@@ -24,6 +24,20 @@ public class GrilleImpl implements Grille {
     {'4', '@', '@', '3', '8', '@', '@', '@', '@'},
     {'7', '3', '@', '@', '6', '@', '@', '@', '@'}
     };
+  /**
+   * Accesseur de grille.
+   * @return retourne la grile
+   */
+  public final char[][] getGrille() {
+    return this.grille;
+  }
+  /**
+   * Mutateur de grille.
+   * @param nouvGille
+   */
+  public final void setGrille(final char[][] nouvGille) {
+    this.grille = nouvGille;
+  }
   /**
    * @return largeur/hauteur de la grille 9 ou 16 .
    */
