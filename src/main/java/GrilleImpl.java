@@ -13,7 +13,7 @@ public class GrilleImpl implements Grille {
   private static final char[] POSSIBLE = new char[] {'1', '2', '3', '4', '5', '6',
    '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f'};
   /** Tableau de caracteres à deux dimension .*/
-  protected static char[][] grille = new char[][] {
+  protected final static char[][] grille = new char[][] {
     {'.', '@', '@', '@', '3', '@', '@', '6', '2'},
     {'@', '@', '@', '@', '7', '2', '@', '@', '1'},
     {'2', '@', '@', '6', '@', '@', '8', '@', '@'},
