@@ -29,14 +29,14 @@ public class GrilleImpl implements Grille {
    * @return retourne la grile
    */
   public final static char[][] getGrille() {
-    return this.grille;
+    return grille;
   }
   /**
    * Mutateur de grille.
    * @param nouvGille
    */
   public final static void setGrille(final char[][] nouvGille) {
-    this.grille = nouvGille;
+    grille = nouvGille;
   }
   /**
    * @return largeur/hauteur de la grille 9 ou 16 .
