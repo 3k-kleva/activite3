@@ -1,0 +1,3 @@
+/**
+ * Javadoc du package.
+ */
