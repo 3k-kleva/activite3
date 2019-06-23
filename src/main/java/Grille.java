@@ -7,6 +7,13 @@ public interface Grille {
   */
  char EMPTY = '@';
  /**
+  * Caractere possible a mettre dans la grille.
+  * pour une grille 9x9 : 1..9
+  * pour une grille 16x16: 0..9-a..f
+  */
+ char[] POSSIBLE = new char[] {'1', '2', '3', '4', '5', '6',
+   '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f'};
+ /**
   * @return largeur/hauteur de la grille.
   */
  int getDimension();

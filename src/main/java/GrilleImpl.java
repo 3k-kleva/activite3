@@ -5,15 +5,8 @@ import java.util.Arrays;
 public class GrilleImpl implements Grille {
   /** Déclaration de constante. */
   private static final int NEUF = 9;
- /**
-  * Caractere possible a mettre dans la grille.
-  * pour une grille 9x9 : 1..9
-  * pour une grille 16x16: 0..9-a..f
-  */
-  private static final char[] POSSIBLE = new char[] {'1', '2', '3', '4', '5', '6',
-   '7', '8', '9', '0', 'a', 'b', 'c', 'd', 'e', 'f'};
   /** Tableau de caracteres à deux dimension .*/
-  private static char[][] grille = new char[][] {
+  public static char[][] grille = new char[][] {
     {'.', '@', '@', '@', '3', '@', '@', '6', '2'},
     {'@', '@', '@', '@', '7', '2', '@', '@', '1'},
     {'2', '@', '@', '6', '@', '@', '8', '@', '@'},
@@ -24,20 +17,6 @@ public class GrilleImpl implements Grille {
     {'4', '@', '@', '3', '8', '@', '@', '@', '@'},
     {'7', '3', '@', '@', '6', '@', '@', '@', '@'}
     };
-  /**
-   * Accesseur de grille.
-   * @return retourne la grile
-   */
-  public final static char[][] getGrille() {
-    return grille;
-  }
-  /**
-   * Mutateur de grille.
-   * @param nouvGille
-   */
-  public final static void setGrille(final char[][] nouvGille) {
-    grille = nouvGille;
-  }
   /**
    * @return largeur/hauteur de la grille 9 ou 16 .
    */
@@ -112,6 +91,7 @@ public class GrilleImpl implements Grille {
   *        ('1',...,'9')
   */
   public final void setValue(final int x, final int y, final char value) {
+    int dimenssion = grille.length;
     boolean cont = false;
     cont = Arrays.toString(POSSIBLE).contains(Character.toString(value));
     if (cont == true) {
