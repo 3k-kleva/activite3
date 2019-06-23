@@ -84,10 +84,10 @@ public class GrilleImpl implements Grille {
   * @param y       position y dans la grille
   * @param value
   *            valeur a mettre dans la case
-  * @throw IllegalArgumentException si x ou y sont hors bornes (0-8)
-  * @throw IllegalArgumentException si la valeur est interdite aux vues des
+  * @throws IllegalArgumentException si x ou y sont hors bornes (0-8)
+  * @throws IllegalArgumentException si la valeur est interdite aux vues des
   *        autres valeurs de la grille
-  * @throw IllegalArgumentException si value n'est pas un caractere autorise
+  * @throws IllegalArgumentException si value n'est pas un caractere autorise
   *        ('1',...,'9')
   */
   public final void setValue(final int x, final int y, final char value) {
@@ -117,7 +117,7 @@ public class GrilleImpl implements Grille {
   * @param x      position x dans la grille
   * @param y      position y dans la grille
   * @return valeur dans la case x,y
-  * @throw IllegalArgumentException si x ou y sont hors bornes (0-8)
+  * @throws IllegalArgumentException si x ou y sont hors bornes (0-8)
   */
   public final char getValue(final int x, final int y) {
     if ((x >= NEUF) || (x < 0)) {
@@ -153,8 +153,8 @@ public class GrilleImpl implements Grille {
   * @param x     position x dans la grille
   * @param y     position y dans la grille
   * @param value a mettre dans la case
-  * @throw IllegalArgumentException si x ou y sont hors bornes (0-8)
-  * @throw IllegalArgumentException si value n'est pas un caractere autorise
+  * @throws IllegalArgumentException si x ou y sont hors bornes (0-8)
+  * @throws IllegalArgumentException si value n'est pas un caractere autorise
   *        ('1',...,'9',..)
   * @return true si c'est une valeur possible
   */

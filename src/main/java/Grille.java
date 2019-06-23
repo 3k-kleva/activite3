@@ -23,7 +23,7 @@ public interface Grille {
   * @param y       position y dans la grille
   * @param value
   *            valeur a mettre dans la case
-  * @throwsIllegalArgumentException si x ou y sont hors bornes (0-8)
+  * @throws IllegalArgumentException si x ou y sont hors bornes (0-8)
   * @throws IllegalArgumentException si la valeur est interdite aux vues des
   *        autres valeurs de la grille
   * @throws IllegalArgumentException si value n'est pas un caractere autorise
