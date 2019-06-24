@@ -140,4 +140,23 @@ public class GrilleImplTest{
     assertTrue(grid.complete());	
   }
   
+  @Test
+  public void resoudreTest() {
+    assertTrue(grid.resoudre());
+  }
+  
+  @Test
+  public void displayGrille() {
+    grid.displayGrille();
+  }
+  
+  @Test
+  public void checkCaractereTest() {
+    assertTrue(grid.checkCaractere('5'));
+  }
+  
+  @Test
+  public void checkCaractereTest1() {
+    assertFalse(grid.checkCaractere('-'));
+  }
 }

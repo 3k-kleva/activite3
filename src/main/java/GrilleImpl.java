@@ -236,4 +236,41 @@ public class GrilleImpl implements Grille {
         + "un caractere autorise");
       }
   }
+  /**
+  * La méthode affiche la grille .
+  */
+  public final void displayGrille() {
+    for (int l = 0; l < NEUF; l++) {
+      for (int c = 0; c < NEUF; c++) {
+        System.out.print(grille[l][c] + " ");
+      }
+      System.out.println("                  ");
+    }
+  }
+  /** La fonction resoud la grille.
+   * @return true si la grille est résolue
+   */
+  public final boolean resoudre() {
+    for (int l = 0; l < NEUF; l++) {
+      for (int c = 0; c < NEUF; c++) {
+        if (this.grille[l][c] == EMPTY) {
+            // On parcours les valeurs possibles
+            for (int v = 0; v < NEUF; v++) {
+              // Si la valeur est possible on l'essai
+              if (possible(l, c, POSSIBLE[v])) {
+                //this.setValue(l, c, POSSIBLE[v]);
+                this.grille[l][c] = POSSIBLE[v];
+                if (resoudre()) {
+                  return true;
+                } else {
+                   this.grille[l][c] = EMPTY;
+                }
+            }
+            }
+            return false;
+        }
+      }
+    }
+    return true;
+  }
 }
