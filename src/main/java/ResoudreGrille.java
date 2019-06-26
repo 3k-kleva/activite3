@@ -16,9 +16,7 @@ public final class ResoudreGrille {
     lagrille.displayGrille();
     System.out.println("                        ");
     System.out.println("Grille de sudoku résolu!");
-    long start = System.currentTimeMillis();
     lagrille.resoudre();
-    long end = System.currentTimeMillis();
     lagrille.displayGrille();
   }
 }
